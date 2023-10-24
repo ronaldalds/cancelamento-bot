@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from api.urls import api_router_v1
 from core.settings import settings
 
-app = FastAPI()
+app = FastAPI(title="API Cancelamentos MK", version="0.1.0")
 app.include_router(api_router_v1, prefix="/cancelamento/api/v1")
 
 if __name__ == "__main__":
